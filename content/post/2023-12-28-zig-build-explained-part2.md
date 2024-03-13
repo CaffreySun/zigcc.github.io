@@ -76,7 +76,7 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
-    // 这块调试了很久。API变了不会写，着了很久的文档和看了很久的代码
+    // 这块调试了很久。API变了不会写，找了很久的文档和看了很久的代码
     exe.addCSourceFile(.{ .file = std.build.LazyPath.relative("main.c"), .flags = &.{} });
     exe.addCSourceFile(.{ .file = std.build.LazyPath.relative("buffer.c"), .flags = &.{} });
     //exe.linkLibC();
